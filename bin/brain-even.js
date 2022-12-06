@@ -15,7 +15,7 @@ function evenOrNot(numb){
           return false;}
  }
 
- function jopa () {
+ function brainEven () {
   console.log('brain-games');
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
@@ -48,4 +48,4 @@ return console.log(`Let's try again, ${name}`);}
   console.log(`Congratulations, ${name}`);
  }
 
- jopa()
+ brainEven()
