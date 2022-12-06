@@ -15,7 +15,7 @@ function evenOrNot(numb){
           return false;}
  }
 
- mainFunction = () => {
+ function jopa () {
   console.log('brain-games');
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
@@ -25,7 +25,7 @@ function evenOrNot(numb){
       const max = 100;
 
   let trueAnswers = 0;
-  while(trueAnswers <= 2) {
+  while(trueAnswers <= 3) {
     let anss;
     
     const randomCount = `${Math.floor(Math.random() * (max - min)) + min}`;
@@ -34,9 +34,10 @@ function evenOrNot(numb){
     const userAnsw = readlineSync.question('Your answer:');    
     
     
-    if (evenOrNot(randomCount) === true && userAnsw === 'yes') {anss = "Correct!"}
-  else if (evenOrNot(randomCount) === false && userAnsw === 'no') {anss = "Correct!"}
-  else {anss = `'yes' is wrong answer ;(. Correct answer was 'no'. Let's try again, ${name}`;}
+    if (evenOrNot(randomCount) === true && userAnsw === 'yes') {anss=("Correct!")}
+  else if (evenOrNot(randomCount) === false && userAnsw === 'no') {anss=("Correct!")}
+  else {console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was 'no'.`);
+return console.log(`Let's try again, ${name}`);}
 
  if (anss !== 'Correct!') {trueAnswers = 0;}
 
@@ -46,3 +47,5 @@ function evenOrNot(numb){
   
   console.log(`Congratulations, ${name}`);
  }
+
+ jopa()
