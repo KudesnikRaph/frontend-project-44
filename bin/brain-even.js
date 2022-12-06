@@ -25,7 +25,7 @@ function evenOrNot(numb){
       const max = 100;
 
   let trueAnswers = 0;
-  while(trueAnswers <= 3) {
+  while(trueAnswers <= 2) {
     let anss;
     
     const randomCount = `${Math.floor(Math.random() * (max - min)) + min}`;
