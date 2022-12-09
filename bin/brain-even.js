@@ -35,9 +35,9 @@ function evenOrNot(numb){
     
     
     if (evenOrNot(randomCount) === true && userAnsw === 'yes') {anss=("Correct!")}
-  else if (evenOrNot(randomCount) === false && userAnsw === 'no') {anss=("Correct!")}
-  else {console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was 'no'.`);
-return console.log(`Let's try again, ${name}`);}
+      else if (evenOrNot(randomCount) === false && userAnsw === 'no') {anss=("Correct!")}
+        else {console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was 'no'.`);
+  return console.log(`Let's try again, ${name}`);}
 
  if (anss !== 'Correct!') {trueAnswers = 0;}
 
