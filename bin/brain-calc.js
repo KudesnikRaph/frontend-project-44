@@ -40,7 +40,7 @@ function brainCalc () {
         console.log(answ);
         emptyAnsw ++;
             }
-    console.log(`Congratulations, ${name}`);
+    console.log(`Congratulations, ${name}!`);
                 
 }
 
