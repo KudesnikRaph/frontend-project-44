@@ -6,7 +6,7 @@ const arithmeticProgression = (n, lim) => Array.from({ length: Math.ceil(lim / n
 function proggression (){
     console.log("Welcome to the Brain Games!");
     const name = readlineSync.question ("May I have your name? ");
-    console.log(`Hello!, ${name}`);
+    console.log(`Hello, ${name}!`);
     console.log('What number is missing in the progression?');
     let emptyAnsw = 1;
     while (emptyAnsw <= 3) {
