@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+Main();
 
 function brainEven(x) {
   if (Number.isInteger(x) == true) { return x % 2 == 0; } return undefined;
@@ -15,7 +16,7 @@ function evenOrNot(numb) {
   return false;
 }
 
-function brainEven() {
+export default function Main() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
@@ -49,5 +50,3 @@ function brainEven() {
 
   console.log(`Congratulations, ${name}!`);
 }
-
-brainEven();

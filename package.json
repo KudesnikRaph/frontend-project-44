@@ -12,7 +12,7 @@
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd.js": "bin/brain-gcd.js",
     "brain-progression.js": "bin/brain-progression.js",
-    "brain-prime": "bin/brain-prime"
+    "brain-prime": "bin/brain-prime.js"
   },
   "repository": {
     "type": "git",
