@@ -38,7 +38,7 @@ export default function Main() {
       answ = 'Correct!';
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${logic}'."`);
-      return console.log(`Let's try again, ${name}`);
+      return console.log(`Let's try again, ${name}!`);
     }
 
     if (answ !== 'Correct!') { emptyAnsw = 0; }

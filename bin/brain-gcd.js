@@ -31,7 +31,7 @@ export default function Main() {
 
     if (userAnsw === `${exampleGCD(randomNumbers1, randomNumbers2)}`) { logic = 'Correct!'; } else if (userAnsw !== `${exampleGCD(randomNumbers1, randomNumbers2)}`) {
       console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${exampleGCD(randomNumbers1, randomNumbers2)}'.`);
-      return console.log(`Let's try again, ${name}`);
+      return console.log(`Let's try again, ${name}!`);
     }
 
     if (logic !== 'Correct!') { emptyAnsw = 0; }

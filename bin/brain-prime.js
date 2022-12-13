@@ -36,7 +36,7 @@ export default function Main() {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${prime(quest)}'.`);
-      return console.log(`Let's try again, ${name}`);
+      return console.log(`Let's try again, ${name}!`);
     }
   }
 }
