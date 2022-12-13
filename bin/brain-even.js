@@ -1,14 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-Main();
-
-function brainEven(x) {
-  if (Number.isInteger(x) == true) { return x % 2 == 0; } return undefined;
-}
 
 function evenOrNot(numb) {
   const number = numb;
-  if (Math.floor(number / 2) == number / 2) {
+  if (Math.floor(number / 2) === number / 2) {
     // Чётное
     return true;
   }
@@ -45,8 +40,10 @@ export default function Main() {
     if (anss !== 'Correct!') { trueAnswers = 0; }
 
     console.log(anss);
-    trueAnswers++;
+    trueAnswers += 1;
   }
 
   console.log(`Congratulations, ${name}!`);
 }
+
+Main();

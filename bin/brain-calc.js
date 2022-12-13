@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-function brainCalc() {
+export default function Main() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
@@ -24,20 +24,25 @@ function brainCalc() {
     const example = `${randomNumbers1} ${randomExample} ${randomNumbers2}`;
     console.log(`Question: ${example}`);
 
-    if (randomExample === '+') { logic = `${(randomNumbers1 * 1) + (randomNumbers2 * 1)}`; } else if (randomExample === '*') { logic = `${randomNumbers1 * randomNumbers2}`; } else { logic = `${randomNumbers1 - randomNumbers2}`; } // знаки примеров
+    if (randomExample === '+') {
+      logic = `${(randomNumbers1 * 1) + (randomNumbers2 * 1)}`;
+    } else if (randomExample === '*') {
+      logic = `${randomNumbers1 * randomNumbers2}`;
+    } else { logic = `${randomNumbers1 - randomNumbers2}`; } // знаки примеров
 
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer === logic) { answ = 'Correct!'; } else {
+    if (answer === logic) {
+      answ = 'Correct!';
+    } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${logic}'."`);
       return console.log(`Let's try again, ${name}`);
     }
 
     if (answ !== 'Correct!') { emptyAnsw = 0; }
     console.log(answ);
-    emptyAnsw++;
+    emptyAnsw += 1;
   }
   console.log(`Congratulations, ${name}!`);
 }
-
-brainCalc();
+Main();

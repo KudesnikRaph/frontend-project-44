@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-function gcd() {
+export default function Main() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -39,4 +39,4 @@ function gcd() {
   }
   console.log(`Congratulations, ${name}!`);
 }
-gcd();
+Main();

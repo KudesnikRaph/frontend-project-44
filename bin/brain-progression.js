@@ -3,7 +3,7 @@ import readlineSync from 'readline-sync';
 
 const arithmeticProgression = (n, lim) => Array.from({ length: Math.ceil(lim / n) }, (_, i) => (i + 1) * n);
 
-function proggression() {
+export default function Main() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -26,4 +26,4 @@ function proggression() {
   console.log(`Congratulations, ${name}!`);
 }
 
-proggression();
+Main();
