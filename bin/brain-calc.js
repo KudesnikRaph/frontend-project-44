@@ -13,11 +13,13 @@ export default function Main() {
     let logic;
 
     const min = 0;
-    const max = 25;
+    const max = 50;
     const randomNumbers1 = `${Math.floor(Math.random() * (max - min) + min)}`;
     const randomNumbers2 = `${Math.floor(Math.random() * (max - min) + min)}`;
 
-    const values = ['+', '-', '*']; // значения модуля
+    const values = ['+', '-', '*'];
+
+    // eslint-disable-next-line max-len, no-inner-declarations, no-shadow
     function random(values) { const radious = Math.floor(Math.random() * values.length); return values[radious]; }
 
     const randomExample = random(values);

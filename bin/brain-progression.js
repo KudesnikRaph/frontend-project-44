@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
+// eslint-disable-next-line max-len
 const arithmeticProgression = (n, lim) => Array.from({ length: Math.ceil(lim / n) }, (_, i) => (i + 1) * n);
 
 export default function Main() {
@@ -10,6 +11,7 @@ export default function Main() {
   console.log('What number is missing in the progression?');
   let emptyAnsw = 1;
   while (emptyAnsw <= 3) {
+    // eslint-disable-next-line max-len
     const randonCount = arithmeticProgression(Math.floor(Math.random() * (20 - 10)) + 2, Math.floor(Math.random() * (50 - 25)) + 25);
     const trueLet = randonCount[3];
     randonCount[3] = '..';

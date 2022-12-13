@@ -9,6 +9,7 @@ export default function Main() {
 
   let emptyAnsw = 1;
   while (emptyAnsw <= 3) {
+    // eslint-disable-next-line no-inner-declarations
     function exampleGCD(a, b) {
       if (b === 0) {
         return a;
