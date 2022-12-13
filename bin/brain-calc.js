@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
+// eslint-disable-next-line no-use-before-define
+Main();
+
 export default function Main() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
@@ -47,4 +50,3 @@ export default function Main() {
   }
   console.log(`Congratulations, ${name}!`);
 }
-Main();
