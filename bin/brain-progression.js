@@ -19,7 +19,7 @@ export default function Main() {
     const userAnsw = readlineSync.question('You answer: ');
     if (Number(userAnsw) !== Number(trueLet)) {
       console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${trueLet}'.`);
-      return console.log(`Let's try again, ${name}`);
+      return console.log(`Let's try again, ${name}!`);
     }
     emptyAnsw += 1;
     console.log('Correct!');
