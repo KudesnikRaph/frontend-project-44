@@ -30,11 +30,13 @@ function brainEven() {
     const randomCount = `${Math.floor(Math.random() * (max - min)) + min}`;
 
     console.log(`Question: ${randomCount}`);
-    const userAnsw = readlineSync.question('Your answer:');
+    const userAnsw = readlineSync.question('Your answer:  ');
 
-    if (evenOrNot(randomCount) === true && userAnsw === 'yes') { anss = ('Correct!'); } else if (evenOrNot(randomCount) === false && userAnsw === 'no') { anss = ('Correct!'); } else {
-      console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was 'no'.`);
-      return console.log(`Let's try again, ${name}!`);
+    if (evenOrNot(randomCount) === true && userAnsw === 'yes') { anss = ('Correct!'); 
+      } else if (evenOrNot(randomCount) === false && userAnsw === 'no') { anss = ('Correct!'); 
+        } else {
+          console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${Number(randomCount) % 2 === 0 ? 'yes' : 'no'}'.`);
+            return console.log(`Let's try again, ${name}!`);
     }
 
     if (anss !== 'Correct!') { trueAnswers = 0; }
