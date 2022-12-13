@@ -8,7 +8,7 @@ function prime(num) {
   return num > 1;
 }
 
-function primeGame() {
+export default function Main() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
@@ -40,4 +40,4 @@ function primeGame() {
     }
   }
 }
-primeGame();
+Main();
