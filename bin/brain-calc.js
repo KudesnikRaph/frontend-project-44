@@ -33,7 +33,7 @@ export default function Main() {
       logic = `${(randomNumbers1 * 1) + (randomNumbers2 * 1)}`;
     } else if (randomExample === '*') {
       logic = `${randomNumbers1 * randomNumbers2}`;
-    } else { logic = `${randomNumbers1 - randomNumbers2}`; } // знаки примеров
+    } else { logic = `${randomNumbers1 - randomNumbers2}`; }
 
     const answer = readlineSync.question('Your answer: ');
 
