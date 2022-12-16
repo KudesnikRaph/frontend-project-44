@@ -39,6 +39,5 @@ export default function Main() {
     emptyAnsw += 1;
   }
   console.log(`Congratulations, ${name}!`);
-  console.log('JOPA');
 }
 Main();
