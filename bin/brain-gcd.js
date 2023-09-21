@@ -1,23 +1,23 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-export default function Main() {
+function exampleGCD(a, b) {
+  if (b === 0) {
+    return a;
+  }
+  return exampleGCD(b, a % b);
+}
+
+// eslint-disable-next-line consistent-return
+export default function gcd() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   console.log('Find the greatest common divisor of given numbers.');
 
-  let emptyAnsw = 1;
-  while (emptyAnsw <= 3) {
-    // eslint-disable-next-line no-inner-declarations
-    function exampleGCD(a, b) {
-      if (b === 0) {
-        return a;
-      }
-      return exampleGCD(b, a % b);
-    }
-
-    let logic;
+  let rounds = 1;
+  while (rounds <= 3) {
+    let roundAnswer;
 
     const min = 0;
     const max = 100;
@@ -27,17 +27,16 @@ export default function Main() {
 
     console.log(`Question: ${randomNumbers1} ${randomNumbers2}`);
 
-    const userAnsw = readlineSync.question('Your answer: ');
+    const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnsw === `${exampleGCD(randomNumbers1, randomNumbers2)}`) { logic = 'Correct!'; } else if (userAnsw !== `${exampleGCD(randomNumbers1, randomNumbers2)}`) {
-      console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${exampleGCD(randomNumbers1, randomNumbers2)}'.`);
+    if (userAnswer === `${exampleGCD(randomNumbers1, randomNumbers2)}`) { roundAnswer = 'Correct!'; } else if (userAnswer !== `${exampleGCD(randomNumbers1, randomNumbers2)}`) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${exampleGCD(randomNumbers1, randomNumbers2)}'.`);
       return console.log(`Let's try again, ${name}!`);
     }
 
-    if (logic !== 'Correct!') { emptyAnsw = 0; }
-    console.log(logic);
-    emptyAnsw += 1;
+    if (roundAnswer !== 'Correct!') { rounds = 0; }
+    console.log(roundAnswer);
+    rounds += 1;
   }
   console.log(`Congratulations, ${name}!`);
 }
-Main();
