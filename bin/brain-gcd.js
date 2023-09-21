@@ -40,3 +40,4 @@ export default function gcd() {
   }
   console.log(`Congratulations, ${name}!`);
 }
+gcd();

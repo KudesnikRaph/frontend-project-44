@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/KudesnikRaf/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/KudesnikRaf/frontend-project-44/actions)
+[![Actions Status](https://github.com/KudesnikRaf/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/KudesnikRaf/frontend-project-44/actions) 
+[![Maintainability](https://api.codeclimate.com/v1/badges/4a1f36cdec116a809155/maintainability)](https://codeclimate.com/github/KudesnikRaf/frontend-project-44/maintainability)
 
 Project description: my first Hexlet JS project, where I set up the environment by myself and create simple text-based games in the console.
 
