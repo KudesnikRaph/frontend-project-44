@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable consistent-return */
 import readlineSync from 'readline-sync';
 
 const randomNumbers = () => Math.floor(Math.random() * (10 - 1 + 1)) + 1;
@@ -8,7 +9,7 @@ function prime(num) {
   return num > 1;
 }
 
-export default function Main() {
+export default function brainPrime() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
@@ -36,8 +37,8 @@ export default function Main() {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${prime(quest)}'.`);
-      return console.log(`Let's try again, ${name}!`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
   }
 }
-Main();

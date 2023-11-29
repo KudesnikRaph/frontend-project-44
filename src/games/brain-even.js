@@ -1,17 +1,14 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-function evenOrNot(numb) {
+function isEven(numb) {
   const number = numb;
   if (Math.floor(number / 2) === number / 2) {
-    // Чётное
     return true;
   }
-  // Нечётное
   return false;
 }
 
-export default function Main() {
+export default function brainEven() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
@@ -21,29 +18,28 @@ export default function Main() {
 
   let trueAnswers = 0;
   while (trueAnswers <= 2) {
-    let anss;
+    let answer;
 
     const randomCount = `${Math.floor(Math.random() * (max - min)) + min}`;
 
     console.log(`Question: ${randomCount}`);
     const userAnsw = readlineSync.question('Your answer:  ');
 
-    if (evenOrNot(randomCount) === true && userAnsw === 'yes') {
-      anss = ('Correct!');
-    } else if (evenOrNot(randomCount) === false && userAnsw === 'no') {
-      anss = ('Correct!');
+    if (isEven(randomCount) === true && userAnsw === 'yes') {
+      answer = ('Correct!');
+    } else if (isEven(randomCount) === false && userAnsw === 'no') {
+      answer = ('Correct!');
     } else {
       console.log(`'${userAnsw}' is wrong answer ;(. Correct answer was '${Number(randomCount) % 2 === 0 ? 'yes' : 'no'}'.`);
-      return console.log(`Let's try again, ${name}!`);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
 
-    if (anss !== 'Correct!') { trueAnswers = 0; }
+    if (answer !== 'Correct!') { trueAnswers = 0; }
 
-    console.log(anss);
+    console.log(answer);
     trueAnswers += 1;
   }
 
   console.log(`Congratulations, ${name}!`);
 }
-
-Main();

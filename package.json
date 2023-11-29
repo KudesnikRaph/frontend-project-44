@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/KudesnikRaf/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/KudesnikRaf/frontend-project-44/actions)",
-  "main": "index.js",
+  "main": "./src/cli.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/KudesnikRaf/frontend-project-44.git"
   },
-  "author": "",
+  "author": "KudesnikRaph",
   "type": "module",
   "license": "ISC",
   "bugs": {
