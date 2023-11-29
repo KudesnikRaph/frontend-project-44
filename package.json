@@ -1,13 +1,8 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "[![Actions Status](https://github.com/KudesnikRaf/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/KudesnikRaf/frontend-project-44/actions)",
-  "main": "./src/cli.js",
-=======
   "description": "[![Actions Status](https://github.com/KudesnikRaph/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/KudesnikRaf/frontend-project-44/actions)",
   "main": "index.js",
->>>>>>> e45b7bb4af8f7a927a287f6cdc72b1054b0ed2e4
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
